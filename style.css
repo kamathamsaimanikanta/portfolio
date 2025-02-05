@@ -1,0 +1,456 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    background: #f4f4f4; /* Optional: Add a background color */
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+
+
+
+  /* Education Section */
+#Education {
+    padding: 4rem 2rem;
+    background: #f4f4f4;
+    height: 100vh;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.education-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.education-box {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.education-icon {
+    margin-right: 1.5rem;
+}
+
+.education-icon i {
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+.education-details h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+.education-details p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.education-details .institution {
+    font-weight: 600;
+    color: #444;
+}
+
+.education-details .duration {
+    font-style: italic;
+    color: #555;
+}
+
+.education-details .percentage {
+    font-weight: 500;
+    color: #007bff;
+}
+
+
+#Skills {
+    padding: 80px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+    height: 100vh;
+}
+
+.skill-title {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.skills-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skills-box:hover {
+    transform: translateY(-5px);
+}
+
+.skills-icon {
+    margin-bottom: 15px;
+}
+
+.skills-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.skills-details h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.para {
+    color: #7f8c8d;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(200px, auto);
+    }
+    
+    .skills-box:nth-child(4),
+    .skills-box:nth-child(5) {
+        grid-column: span 1.5;
+    }
+}
+
+@media (max-width: 767px) {
+    .skills-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .education-title {
+        font-size: 28px;
+    }
+}
+
+
+
+#projects {
+    padding: 2rem;
+    background: #f5f5f5;
+    height: 100vh;
+}
+
+.projects-container {
+    display: flex;
+    margin-bottom: 2rem;
+    background:white;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.projects-box {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+
+.projects-icon {
+    flex: 0 0 40%;
+    max-width: 400px;
+}
+
+.projects-icon img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.projects-details {
+    flex: 1;
+}
+
+.project-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.projects-details h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.para {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.project-link:hover {
+    background: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .projects-box {
+        flex-direction: column;
+    }
+    
+    .projects-icon {
+        flex: 0 0 auto;
+        max-width: 100%;
+    }
+}
+
+/* General Reset */
+.body, h1, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Container for the About Section */
+  .about-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .about-title{
+    text-align: center;
+  }
+  
+  /* Profile Image Styling */
+  .profile-image {
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid #0073e6;
+  }
+  
+  /* Heading Styling */
+  .about-section h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #0073e6;
+  }
+  
+  /* About Text Styling */
+  .about-text {
+    font-size: 1.1em;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  
+  .about-text strong {
+    color: #0073e6;
+  }
+  
+  /* Personal Details Styling */
+  .personal-details {
+    background-color: #e9f5ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .personal-details p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #555;
+  }
+  
+  .personal-details p strong {
+    color: #333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-section {
+      padding: 15px;
+    }
+  
+    .profile-image {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .about-section h1 {
+      font-size: 2em;
+    }
+  
+    .about-text {
+      font-size: 1em;
+    }
+  
+    .personal-details p {
+      font-size: 0.9em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-section {
+      padding: 10px;
+    }
+  
+    .profile-image {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .about-section h1 {
+      font-size: 1.8em;
+    }
+  
+    .about-text {
+      font-size: 0.9em;
+    }
+  
+    .personal-details p {
+      font-size: 0.8em;
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 20px; /* Increased gap for better spacing */
+    justify-content: center;
+    margin: 30px 0; /* Adjusted margin for better spacing */
+  }
+  
+  .icon {
+    width: 60px; /* Increased icon size */
+    height: 60px; /* Increased icon size */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .icon img {
+    width: 30px; /* Increased icon image size */
+    height: 30px; /* Increased icon image size */
+    object-fit: cover;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
